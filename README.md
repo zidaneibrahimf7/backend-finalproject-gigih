@@ -255,13 +255,13 @@ This endpoint returns all comments of a video by its videoID
 2. Install dependencies
 
    ```bash
-    - npm install
+   npm install
    ```
 
 3. Run the server
 
 ```bash
- - npm start
+  npm start
 ```
 
 1. Build your .env and build your own PORT. So you can access the database using `http://localhost:(YourPortNumber)`
