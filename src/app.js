@@ -8,7 +8,7 @@ import { videoListRouter, productListRouter, commentListRouter } from "../src/ro
 
 dotenv.config()
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT
 
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());

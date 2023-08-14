@@ -38,6 +38,21 @@ productListRouter.get('/:videoID', async (req, res) => {
   }
 })
 
+// Method GET getProductDetails to get product details by productName
+productListRouter.get('/search', async (req, res) => {
+  const { query } = req.query;
+  try {
+    const product = await productListModels.findOne({ productName: { $regex: query, $options: 'i' } });
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+
 // Method GET commentlist to get comment list in database
 commentListRouter.get('/:videoID', async (req, res) => {
   const { videoID } = req.params
@@ -78,5 +93,25 @@ commentListRouter.post('/submit-comment', async (req, res) => {
     res.status(500).json({ response: 'Fail', messsage: "internal server error" })
   }
 })
+
+// Method DELETE CommentList to delete all Comment in database
+commentListRouter.delete('/delete-comment/:videoID', async (req, res) => {
+  const { videoID } = req.params;
+  try {
+    // delete comment by ID
+    const deletedComment = await commentListModels.findOneAndDelete({ videoID });
+
+    if (deletedComment) {
+      res.status(200).json({ message: "Comment deleted successfully!" })
+    }
+    else {
+      res.status(404).json({ message: "Comment not found!" });
+    }
+  }
+  catch (e) {
+    console.log("Error: ", e)
+    res.status(500).json({ message: "Internal server error" })
+  }
+});
 
 export { videoListRouter, productListRouter, commentListRouter }
