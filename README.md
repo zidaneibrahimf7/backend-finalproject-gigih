@@ -77,6 +77,18 @@ inside the `Backend Architecture` there are 2 layers:
 
 ## List APIs
 
+### API Request and Response
+
+| Method | Endpoint | Description | Access Control |
+| GET | `api/video/` | get all video list video Thumbnail | user |
+| GET | `api/product/:videoID` | get product properties from videoID | user |
+| GET | `api/product/search` | get product details search bar | user |
+| GET | `api/comment/:videoID` | get all comment list from database | user |
+| POST | `api/comment/submit-comment` | post comment list to database | user |
+| DELETE | `api/comment/delete-comment/:videoID` | delete comment user list in database | user |
+
+API list example you can see at [!API Example Request and Response](https://gist.github.com/zidaneibrahimf7/440cda5e17d8e41e67258d2f0bb676c4)
+
 The list of APIs is as follows:
 
 ### GET api/videos
