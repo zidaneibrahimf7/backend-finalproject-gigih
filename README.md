@@ -4,9 +4,14 @@
 
 This repository was created as proof that the Final Project Generation Gigih 3.0 Full Stack Engineering by GoTo Impact Foundation has been completed
 
+## Front-End Final Project
+
+If you want to see Front-End Final Project Generasi Gigih you can access :
+`https://github.com/zidaneibrahimf7/frontend-finalproject-gigih`
+
 ## Database Structure
 
-<!-- ![Database Schema](./docs/midtermgigih.drawio.png) -->
+![Database Schema](.docs/finalproject-be-gigih.png)
 
 There are 3 collections in the database models:
 
@@ -16,7 +21,7 @@ There are 3 collections in the database models:
 
 ## API Architecture
 
-<!-- ![API Architecture](./docs/midtermgigih-apiarch.drawio.png) -->
+![API Architecture](./docs/finalproject-be-gigih-apiarch.drawio.png)
 
 the API structure
 
@@ -244,24 +249,76 @@ This endpoint returns all comments of a video by its videoID
   }
   ```
 
+  ### DELETE api/comment/submit-comment
+
+This endpoint returns all comments of a video by its videoID
+
+- URL Params:
+  required:
+- Data Params:
+  None
+- Headers:
+  Context-text: application/json
+- Success Response
+  `Code: 200`
+
+  - Content:
+
+  ```json
+  {
+    "message": "Comment deleted successfully"
+  }
+  ```
+
+- Error Response
+  `Code: 404`
+
+  - Content:
+
+  ```json
+  {
+    "message": "Comment not found!"
+  }
+  ```
+
+  `Code: 500`
+
+  - Content:
+
+  ```json
+  {
+    "message": "Internal server error"
+  }
+  ```
+
+  `Code: 409`
+
+  - Content:
+
+  ```json
+  {
+    "message": "Video ID not found in database"
+  }
+  ```
+
 ## How to run!
 
 1. Clone this repository
 
 ```bash
- git clone `https://github.com/zidaneibrahimf7/backend-finalproject-gigih.git`
+git clone `https://github.com/zidaneibrahimf7/backend-finalproject-gigih.git`
 ```
 
 2. Install dependencies
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. Run the server
 
 ```bash
-  npm start
+npm start
 ```
 
-1. Build your .env and build your own PORT. So you can access the database using `http://localhost:(YourPortNumber)`
+4. Build your .env and build your own PORT. So you can access the database using `http://localhost:(YourPortNumber)`
