@@ -11,7 +11,7 @@ If you want to see Front-End Final Project Generasi Gigih you can access :
 
 ## Database Structure
 
-![Database Schema](.docs/finalproject-be-gigih.png)
+![Database Schema](./docs/finalproject-be-gigih.jpg)
 
 There are 3 collections in the database models:
 
