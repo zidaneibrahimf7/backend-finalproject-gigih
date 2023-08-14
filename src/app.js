@@ -14,6 +14,9 @@ app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/api', (req, res) => {
+  return res.send('Welcome to Tokopedia Play Clone API Zidane')
+})
 app.use('/api/videos', videoListRouter)
 app.use('/api/product', productListRouter)
 app.use('/api/comment', commentListRouter)
@@ -36,6 +39,3 @@ db.once('connected', () => {
   console.info('Database Connected')
 })
 
-// app.get('/', (req, res) => {
-//   return res.send('Hello World')
-// })
