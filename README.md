@@ -9,6 +9,10 @@ This repository was created as proof that the Final Project Generation Gigih 3.0
 If you want to see Front-End Final Project Generasi Gigih you can access :
 `https://github.com/zidaneibrahimf7/frontend-finalproject-gigih`
 
+# Project Development Schema
+
+![Architecture Final Project Schema](./docs/Architecture_FinalProject_Gigih.drawio-2.png)
+
 ## Database Structure
 
 ![Database Schema](./docs/finalproject-be-gigih.jpg)
@@ -301,7 +305,11 @@ This endpoint returns all comments of a video by its videoID
   }
   ```
 
-## How to run!
+## How to run! (Getting Started Run Locally)
+
+### Environment Equipment
+
+Create a `.env` file in the project root and Build your own Database Url `Your (MONGODB_DATABASE_URL)`
 
 1. Clone this repository
 
@@ -322,3 +330,14 @@ npm start
 ```
 
 4. Build your .env and build your own PORT. So you can access the database using `http://localhost:(YourPortNumber)`
+
+## Improvement API Server Side
+
+1. Server Side Event in Comment Feature :
+   - user can write comment and submit it without refresh a page.
+     Endpoint: `/api/comment/submit-comment`
+   - User can delete comments by clicking "delete
+     Endpoint : `/api/comment/delete-comment/:videoID`
+2. Search Box Feature API :
+   - User can write some product name and found the product detail.
+     Endpoint:` /api/product/search`
