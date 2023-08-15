@@ -377,4 +377,4 @@ npm start
 
 ## Deployment
 
-You can access backend server API at `https://backend-finalproject-gigih.vercel.app/api`
+You can access backend server API at [Deployment API Tokopedia Play Clone](https://backend-finalproject-gigih.vercel.app/api)
