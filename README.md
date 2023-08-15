@@ -374,3 +374,7 @@ npm start
 2. Search Box Feature API :
    - User can write some product name and found the product detail.
      Endpoint:` /api/product/search`
+
+## Deployment
+
+You can access backend server API at `https://backend-finalproject-gigih.vercel.app/api`
